@@ -1,0 +1,679 @@
+/* RESET DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-bottom: 3px solid limegreen;
+}
+
+.header-content-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.header .text h1 {
+  margin: 0;
+  font-size: 24px;
+  color: limegreen;
+}
+
+.header .text p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.header i {
+  margin-right: 6px;
+}
+
+
+/* SIDEBAR */
+#sidebar {
+  background-color: #1a1a1a;
+  padding: 20px;
+  width: 200px;
+  min-height: 100vh;
+  float: left;
+}
+
+#sidebar ul {
+  list-style: none;
+}
+
+#sidebar li {
+  margin: 15px 0;
+}
+
+#sidebar a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+#sidebar a:hover {
+  color: limegreen;
+}
+
+/* MAIN CONTENT */
+main {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+/* LAYANAN LIST */
+.layanan-list {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.layanan-list li {
+  margin-bottom: 8px;
+}
+
+/* FOOTER */
+#footer {
+  clear: both;
+  text-align: center;
+  padding: 15px;
+  background-color: #1f1f1f;
+  color: #aaa;
+  border-top: 2px solid limegreen;
+}
+
+/* FLOATING WHATSAPP */
+.floating-wa {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1000;
+  width: 90px; /* lebih besar */
+  height: 90px; /* lebih besar */
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.floating-wa:hover {
+  transform: scale(1.1);
+}
+
+.floating-wa img {
+  width: 80px;  /* sesuaikan dengan ukuran tombol */
+  height: 80px;
+  object-fit: contain;
+}
+
+
+
+
+/* LOADER SCREEN */
+#loader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader-logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.spinner {
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top: 5px solid limegreen;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+#nav-sidebar {
+  background-color: #1a1a1a;
+  padding: 20px;
+  width: 220px;
+  min-height: 100vh;
+  float: left;
+  border-right: 2px solid #333;
+}
+
+#nav-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#nav-sidebar li {
+  margin-bottom: 20px;
+}
+
+#nav-sidebar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+#nav-sidebar a i {
+  margin-right: 10px;
+  font-size: 18px;
+  color: limegreen;
+}
+
+#nav-sidebar a:hover {
+  color: limegreen;
+  transform: translateX(5px);
+}
+
+.header {
+  background-color: #1f1f1f;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid limegreen;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.header .logo {
+  width: 90px;
+  height: auto;
+}
+
+.header .header-text h1 {
+  font-size: 24px;
+  color: limegreen;
+}
+
+.header .header-text .subtext {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.header i {
+  margin-right: 8px;
+  color: limegreen;
+}
+
+.dashboard {
+  padding: 20px;
+}
+
+.dashboard h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: limegreen;
+}
+
+.fitur-box {
+  background-color: #1a1a1a;
+  padding: 15px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.fitur-box h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.fitur-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.fitur-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.fitur-list li i {
+  color: limegreen;
+  margin-right: 10px;
+}
+
+.layanan {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #111;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+  animation: fadeIn 1s ease-in;
+}
+
+.layanan h2, .layanan h3 {
+  color: limegreen;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.layanan-list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.layanan-list li {
+  background-color: #1b1b1b;
+  padding: 10px 14px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.layanan-list li:hover {
+  background-color: #2a2a2a;
+  transform: scale(1.03);
+}
+
+.galeri-foto, .galeri-video {
+  display: grid;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.galeri-foto {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.galeri-foto img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeri-foto img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 255, 0, 0.3);
+}
+
+.galeri-video {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.galeri-video video {
+  width: 50%;
+  border-radius: 10px;
+  outline: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeri-video video:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(0, 255, 0, 0.2);
+}
+
+/* Animasi fadeIn saat muncul */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.footer {
+  background-color: #1f1f1f;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  border-top: 2px solid limegreen;
+}
+
+.footer i {
+  margin-right: 6px;
+  color: limegreen;
+}
+
+.dashboard {
+  padding: 30px 20px;
+  color: #eee;
+}
+
+/* Selamat Datang */
+.welcome-card {
+  background: #121212;
+  padding: 20px;
+  border-left: 5px solid limegreen;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.05);
+}
+
+.welcome-card h2 {
+  font-size: 20px;
+  color: limegreen;
+  margin-bottom: 10px;
+}
+
+.welcome-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Layanan */
+.layanan-section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: limegreen;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.layanan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.layanan-card {
+  background: #1c1c1c;
+  padding: 12px 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #eee;
+  box-shadow: 0 0 5px rgba(0, 255, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.layanan-card:hover {
+  transform: scale(1.03);
+  background: #2a2a2a;
+}
+
+.layanan-card i {
+  color: limegreen;
+  font-size: 18px;
+}
+
+/* Statistik */
+.statistik {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  flex: 1 1 150px;
+  background-color: #101010;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.05);
+}
+
+.stat-box i {
+  font-size: 24px;
+  color: limegreen;
+  margin-bottom: 8px;
+}
+
+.stat-box p {
+  font-size: 13px;
+}
+
+.welcome-section {
+  max-width: 900px;
+  margin: 40px auto 20px;
+  padding: 20px;
+  background: #111;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,255,0,0.1);
+  color: white;
+}
+
+.welcome-header {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: limegreen;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.welcome-header i {
+  font-size: 28px;
+}
+
+.welcome-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.layanan-box {
+  background: #1c1c1c;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.layanan-box h3 {
+  color: limegreen;
+  margin-bottom: 15px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.layanan-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.layanan-item {
+  display: flex;
+  align-items: center;
+  background-color: #2a2a2a;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #fff;
+  gap: 10px;
+  font-size: 15px;
+  transition: background 0.3s;
+}
+
+.layanan-item:hover {
+  background-color: #3a3a3a;
+}
+
+.layanan-item i {
+  color: limegreen;
+  font-size: 18px;
+}
+
+.lokasi {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #111;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+  color: #fff;
+}
+
+.lokasi h2 {
+  color: limegreen;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lokasi p {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.lokasi-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.foto-box img {
+  width: 100%;
+  max-width: 400px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 255, 0, 0.2);
+}
+
+.lokasi-info {
+  flex: 1;
+  min-width: 240px;
+}
+
+.lokasi-info p {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.btn-lokasi {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: limegreen;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.btn-lokasi:hover {
+  background-color: #00cc00;
+}
+
+.kontak {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #111;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.1);
+  color: #fff;
+}
+
+.kontak h2 {
+  color: limegreen;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.kontak p {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.kontak-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.kontak-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.kontak-item i {
+  color: limegreen;
+  font-size: 18px;
+  min-width: 20px;
+}
+
+.kontak-item a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.kontak-item a:hover {
+  color: limegreen;
+}
+
+
+
+
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

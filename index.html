@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dun's Garasi26 & Body Repair</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" href="images/logo.png">
+<!-- AOS Animation CDN -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+</head>
+<body>
+  <!-- Loading screen -->
+  <div id="loader">
+    <img src="images/logo.png" alt="Loading Logo" class="loader-logo">
+    <div class="spinner"></div>
+    <p>Memuat halaman...</p>
+  </div>
+
+  <!-- Konten utama -->
+  <div id="app" style="display:none;">
+    <div id="header"></div>
+    <div id="sidebar"></div>
+    <main id="content"></main>
+    <div id="footer"></div>
+
+    <a href="https://wa.me/6285210557405" class="floating-wa" target="_blank">
+      <img src="images/walogo.png" alt="WhatsApp">
+    </a>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      Promise.all([
+        fetch("components/header.html").then(res => res.text()).then(data => {
+          document.getElementById("header").innerHTML = data;
+        }),
+        fetch("components/sidebar.html").then(res => res.text()).then(data => {
+          document.getElementById("sidebar").innerHTML = data;
+        }),
+        fetch("components/dashboard.html").then(res => res.text()).then(data => {
+          document.getElementById("content").innerHTML = data;
+        }),
+        fetch("components/footer.html").then(res => res.text()).then(data => {
+          document.getElementById("footer").innerHTML = data;
+        })
+      ]).then(() => {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("app").style.display = "block";
+      });
+    });
+  </script>
+  <script>
+  if (window.location.protocol === 'file:') {
+    alert("⚠️ Website tidak bisa dijalankan langsung dari file explorer.\n\nSilakan jalankan melalui Live Server di VS Code atau hosting seperti XAMPP/GitHub Pages.");
+    document.body.innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:center;height:100vh;flex-direction:column;background:#000;color:white;text-align:center">
+        <h1 style="color:limegreen;">⚠️ Tidak Bisa Dibuka Langsung</h1>
+        <p>Silakan jalankan menggunakan <strong>Live Server (VS Code)</strong> atau <strong>XAMPP</strong></p>
+        <p>Karena browser memblokir pemanggilan file saat dibuka langsung via <code>file:///</code></p>
+      </div>
+    `;
+  }
+</script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
